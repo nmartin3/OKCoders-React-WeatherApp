@@ -24,6 +24,17 @@
   color: white;
 }
 
+/* NAVIGATION STYLING OVERRIDES */
+#basic-navbar-nav .me-auto {
+    margin: 1em 2em !important;
+    margin-right: 2em !important;
+}
+
+    #basic-navbar-nav .me-auto a {
+        color: #333435;
+        text-decoration: none;
+    }
+
 .App-header .card-title {
     color: #282c34;
 }
@@ -35,6 +46,7 @@
 .card {
     margin-top: 2em;
 }
+
 
 @keyframes App-logo-spin {
   from {

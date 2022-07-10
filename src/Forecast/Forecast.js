@@ -5,7 +5,7 @@ import ForecastDisplay from "./ForecastDisplay";
 import { useState } from "react";
 
 function Forecast() {
-  const apiKey = "bcdefa17d9b7477db50225739221805";
+    const apiKey = "f42cb39b3aae433f8ae152130221405";
   const [days, setDays] = useState(5);
   const [query, setQuery] = useState("73106");
   const [weatherData, setWeatherData] = useState({});

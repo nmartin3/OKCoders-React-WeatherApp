@@ -11,11 +11,9 @@ function SingleDayForecastCard(props) {
                                 <Card.Title>Weather for {props.locationName}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">Date: {props.date}</Card.Subtitle>
                                 <Card.Text>
-                                    <ul>
-                                        <li>Average Temp: {props.averageTemp}</li>
-                                        <li>High Temp: {props.highTemp}</li>
-                                        <li>Low Temp: {props.lowTemp}</li>
-                                    </ul>
+                                    <p>Average Temp: {props.averageTemp}</p>
+                                    <p>High Temp: {props.highTemp}</p>
+                                    <p>Low Temp: {props.lowTemp}</p>
                                 </Card.Text>
                                 {/* <Card.Link href="#">Card Link</Card.Link>
                                 <Card.Link href="#">Another Link</Card.Link>*/}

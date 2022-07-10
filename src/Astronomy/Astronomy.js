@@ -1,14 +1,14 @@
-import HomePageDisplay from "./HomePageDisplay"
+import AstronomyPageDisplay from "./AstronomyDisplay"
 import { useEffect, useState } from "react";
 
-function HomePage() {
+function AstronomyPage() {
 
     const apiKey = "f42cb39b3aae433f8ae152130221405";
-    const days = 1;
-    const query = "80424"
+    const day = '2022-07-11';
+    const query = "73162"
     const [weatherData, setWeatherData] = useState({});
     //const [loading, setLoading] = '';
-    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${query}&days=${days}`
+    const url = `https://api.weatherapi.com/v1/astronomy.json?key=${apiKey}&q=${query}&dt=${day}`
 
 
     async function isLoaded(e) {
@@ -16,21 +16,21 @@ function HomePage() {
         //setLoading(true);
         const response = await fetch(url);
         const data = await response.json();
-       // setLoading(false);
+        // setLoading(false);
         setWeatherData(data);
     }
 
     useEffect(() => {
         isLoaded();
-    },[])
+    }, [])
 
 
     return (
         <div>
-            <HomePageDisplay weatherData={weatherData} />
+            <AstronomyPageDisplay weatherData={weatherData} />
         </div>
     )
 }
 
 
-export default HomePage;
+export default AstronomyPage;

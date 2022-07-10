@@ -2,6 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Forecast from "./Forecast/Forecast";
+import Astronomy from "./Astronomy/Astronomy";
 import CurrentTemp from "./Current/CurrentTemp"
 import HomePage from "./HomePage/HomePage";
 import Navbar from "react-bootstrap/Navbar";
@@ -16,10 +17,11 @@ function App() {
           <Navbar.Brand href="/">Weather</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+             <Nav className="me-auto">
               <Link to="forecast">Forecast</Link>
-              {/* <Nav.Link href="#home">Forecast</Nav.Link> */}
-              {/* <Nav.Link href="#link">Historical</Nav.Link> */}
+             </Nav>
+             <Nav className="me-auto">
+                <Link to="astronomy">Astronomy</Link>
              </Nav>
              <Nav className="me-auto">
                <Link to="current">Current</Link>
@@ -31,6 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="forecast" element={<Forecast></Forecast>}></Route>
+          <Route path="astronomy" element={<Astronomy></Astronomy>}></Route>
           <Route path="current" element={<CurrentTemp></CurrentTemp>}></Route>
         </Routes>
        </header>
